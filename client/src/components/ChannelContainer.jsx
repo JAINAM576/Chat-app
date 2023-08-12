@@ -18,7 +18,7 @@ return(
   channel?.data?.created_by?.id===client.userID &&  <div className="channel__container">
 
    
-<EditChannel createType={createType} setToggleContainer={setToggleContainer} setCreateType={setCreateType} setIsEditing={setIsEditing}/>
+<EditChannel createType={createType} setToggleContainer={setToggleContainer} setCreateType={setCreateType} setIsCreating={setIsCreating} setIsEditing={setIsEditing}/>
   </div>
 ) 
 

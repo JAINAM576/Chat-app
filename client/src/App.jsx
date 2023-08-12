@@ -14,7 +14,7 @@ import StarsCanvas from './components/stars';
 
 const cookies=new Cookies();
 const authtoken=cookies.get('token');
-const api_key='pxq76gr5yzz5';
+const api_key='aaxqdspgvrt9';
 const client=StreamChat.getInstance(api_key);
 if(authtoken){
   client.connectUser({

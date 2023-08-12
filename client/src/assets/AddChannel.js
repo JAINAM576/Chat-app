@@ -10,7 +10,7 @@ export const AddChannel = ({ setCreateType, setIsCreating, setIsEditing, setTogg
     onClick={() => {
       setCreateType(type);
       setIsCreating((prevState) => !prevState);
-      setIsEditing((prev)=>!prev);
+      setIsEditing(false);
       if(setToggleContainer) setToggleContainer((prevState) => !prevState) 
     }}
   >

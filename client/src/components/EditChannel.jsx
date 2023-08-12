@@ -20,7 +20,7 @@ return(
 )
 } 
 
-const EditChannel = ({setIsEditing,createType,setToggleContainer,setCreateType}) => {
+const EditChannel = ({setIsEditing,createType,setToggleContainer,setCreateType,setIsCreating}) => {
   const {channel,client,setActiveChannel}=useChatContext();
   const [channelName, setchannelName] = useState(channel?.data?.name.slice(7,channel.length))
   const [selectedUsers, setselectedUsers] = useState([])
@@ -82,7 +82,7 @@ if(createType==='messaging'){
     <div className='edit-channel__container edit-channel__container1'>
     <div className="edit-channel__header">
       <p className="">Edit Channel</p>
-      <CloseCreateChannel setIsEditing={setIsEditing}/>
+      <CloseCreateChannel setIsEditing={setIsEditing} setToggleContainer={setToggleContainer} setIsCreating={setIsCreating}/>
     </div>
           <div className="edit-channel__button-wrapper" >
         
@@ -96,7 +96,7 @@ if(createType==='messaging'){
     <div className='edit-channel__container'>
 <div className="edit-channel__header">
   <p className="">Edit Channel</p>
-  <CloseCreateChannel setIsEditing={setIsEditing}/>
+  <CloseCreateChannel setIsEditing={setIsEditing} setToggleContainer={setToggleContainer} setIsCreating={setIsCreating}/>
 </div>
       <ChannelNameInput channelName={channelName} setchannelName={setchannelName}/>
       <Userslist setselectedUsers={setselectedUsers}/>
