@@ -1,6 +1,6 @@
 import React,{useState} from 'react'
 import {StreamChat} from 'stream-chat';
-import {Chat} from 'stream-chat-react';
+import {Chat,useChannelStateContext} from 'stream-chat-react';
 import Cookies from 'universal-cookie';
 
 // import ChannelContainer from './components/ChannelContainer';
@@ -35,7 +35,7 @@ const [isEditing,setIsEditing]=useState(false);
 const [createType,setCreateType]=useState('team');
 const [ToggleContainer, setToggleContainer] = useState(false)
 const [toggle,settoggle]=useState(false)
-
+const {channel}=useChannelStateContext();
   if(!authtoken) return (
 <div className="relative">
 
@@ -87,6 +87,7 @@ ToggleContainer={ToggleContainer}
 setToggleContainer={setToggleContainer}
 toggle1={toggle}
 settoggle={settoggle}
+channel1={channel}
 
 />        
       </Chat>

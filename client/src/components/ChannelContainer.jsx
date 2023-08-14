@@ -1,7 +1,7 @@
 import React from 'react'
 import {Channel,useChatContext,MessageSimple} from 'stream-chat-react'
 import {ChannelInner,CreateChannel,EditChannel} from './'
-const ChannelContainer = ({isCreating,setIsCreating,isEditing,setIsEditing,createType,setToggleContainer,ToggleContainer,toggle1,settoggle,setCreateType}) => {
+const ChannelContainer = ({isCreating,setIsCreating,isEditing,setIsEditing,createType,setToggleContainer,ToggleContainer,toggle1,settoggle,setCreateType,channel1}) => {
   const {channel,client}=useChatContext();
 
 
@@ -15,10 +15,10 @@ return(
   }
   if(isEditing ) {
 return(
-  channel?.data?.created_by?.id===client.userID &&  <div className="channel__container">
+   <div className="channel__container">
 
    
-<EditChannel createType={createType} setToggleContainer={setToggleContainer} setCreateType={setCreateType} setIsCreating={setIsCreating} setIsEditing={setIsEditing}/>
+<EditChannel createType={createType} channel1={channel1} setToggleContainer={setToggleContainer} setCreateType={setCreateType} setIsCreating={setIsCreating} setIsEditing={setIsEditing}/>
   </div>
 ) 
 

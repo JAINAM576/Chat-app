@@ -42,7 +42,7 @@ const CreateChannel = ({createType,setIsCreating,setToggleContainer}) => {
     }
    let text= makeid(7);
    text=text+channelName
-   
+
     const newChannel=await client.channel(createType,text,{
       name:text,members:selectedUsers
     })
@@ -66,7 +66,7 @@ const CreateChannel = ({createType,setIsCreating,setToggleContainer}) => {
     </div>
     {createType==='team' && <ChannelNameInput channelName={channelName} setchannelName={setchannelName}/> }
     <Userslist setselectedUsers={setselectedUsers} selectedUsers={selectedUsers}/>
-    <div className="create-channel__button-wrapper" onClick={createchannel}>
+    <div className="create-channel__button-wrapper" onClick={createchannel} >
       <p>{createType==='team'?'Create Channel':'Create Message Group'}</p>
     </div>
    </div>
